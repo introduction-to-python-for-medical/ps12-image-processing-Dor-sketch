@@ -23,6 +23,8 @@ def edge_detection(image, threshold=50, save_path='edges.png'):
     """
     Perform edge detection using Sobel operator and binary thresholding.
     """
+    # apply median filter to reduce noise
+    image = preprocess_image(image)
     if image.ndim == 3:
         bw_image = image.mean(axis=2)
     else:
