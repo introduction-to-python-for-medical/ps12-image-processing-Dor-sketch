@@ -19,7 +19,7 @@ def preprocess_image(image):
     """
     return median(image, ball(3))
 
-def edge_detection(image, threshold=50, save_path='edges.png'):
+def edge_detection(image, threshold=20, save_path='edges.png'):
     """
     Perform edge detection using Sobel operator and binary thresholding.
     """
